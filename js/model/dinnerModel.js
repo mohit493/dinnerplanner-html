@@ -6,7 +6,7 @@ var DinnerModel = function() {
 
 	var NumOfGuests = 5;
 	var DishType = []; // array for storing all the dishes
-	var FullMenu = []; // array to get all the dishes 
+	var FullMenu = [{},{},{}]; // array to get all the dishes 
 	var AllIngredients = []; // array to get all ingredients
 	
 
@@ -43,11 +43,6 @@ var DinnerModel = function() {
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
-
-		for(key in dishes)
-		{
-			FullMenu.push(dishes[key]);
-		}
 		
 		return FullMenu;
 
@@ -68,46 +63,110 @@ var DinnerModel = function() {
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
 		
-		//TODO Lab 2
-		var TotalMenuPrice = 0; // variable to get total menu price
-		var listIngredients = this.getAllIngredients();
-		
-
-		for (var i = 0; i <= listIngredients.length-1; i++) {
-
-
-			listIngredients[i]
+		var TotalNumOfGuests = this.getNumberOfGuests();
+		var AllIngredients = this.getAllIngredients();
+		var MenuPrice = 0;
+		var ArrayLength = 0;
+		var TempArray = [];
 
 		
-		}
 
-		for(key in listIngredients)
+		for (key in AllIngredients)
 		{
+			ArrayLength = AllIngredients[key].length;
+			TempArray = AllIngredients[key];
 
-			TotalMenuPrice = listIngredients[key].price;
-	
+			for (var i = 0; i < ArrayLength; i++) {
+
+				MenuPrice = MenuPrice + TempArray[i].price;
+			}
+			
+			
 		}
-		return listIngredients;
+
+		return MenuPrice*TotalNumOfGuests;
+		
+		
+		
 	}
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
 		//TODO Lab 2 
+		
+		
+		var dishToAdd = [];
+
+		for (key in dishes)
+		{
+			if(dishes[key].id == id)
+			{
+				dishToAdd = dishes[key];
+				console.log("this is being added"+key);
+			}
+			
+		}
+
+		
+
+			if(dishToAdd.type == "starter")
+			{
+				FullMenu[0] = dishToAdd;
+			}
+			else if(dishToAdd.type == "main dish")
+			{
+				FullMenu[1] = dishToAdd;
+				console.log("this is being added");
+			}
+			else if(dishToAdd.type == "dessert")
+			{
+				FullMenu[2] = dishToAdd;
+			}
+			else
+			{
+				console.log ("this is wow surprising");
+			}
+			
+	
+
+		return FullMenu;
+
+
 	}
 
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) {
 
-		var menu = this.getFullMenu();
-var j;
-		for (j in menu)
+		var dishToRemove = {};
+
+		for (key in dishes)
 		{
-			if(menu[j].id == id)
+			if(dishes[key].id == id)
 			{
-				menu[j].splice(j,1);
+				dishToRemove = dishes[key];
 			}
 		}
+
+			if(dishToRemove.type == "starter")
+			{
+				FullMenu[0] = {};
+			}
+			else if(dishToRemove.type == "main dish")
+			{
+				FullMenu[1] = {};
+			}
+			else if(dishToRemove.type == "dessert")
+			{
+				FullMenu[2] = {};
+			}
+			else
+			{
+				console.log ("this is wow surprising");
+			}
+
+
+	
 		//TODO Lab 2
 	}
 
