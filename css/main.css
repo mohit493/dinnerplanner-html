@@ -55,3 +55,14 @@
     border:1px solid #000;
     display:inline-block;
 }
+
+.hdr-clr
+{
+       background-color: rgba(9,203, 76, 1.0);
+
+}
+
+.border-top
+{
+    padding-top: 2%;
+}
