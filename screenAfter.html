@@ -1,51 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dinner planner testing</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dinner planner testing</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/main.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css">
 
-  </head>
+</head>
 
-  <body class="bg-img">
- 
+<body>
+
   <div class="container-fluid">
-  
-  	<div id="homeView">
- 
-  		<div class="row bg-hdr-home">
-  	
 
-	  		<div class="col-md-10 col-md-offset-1 hdr-txt" >
-  		
-  				<h1>HOMELETTE <span> <h4> From the best chefs in the world directly into your kitchen.</h4></span></h1>
-  				<br>
-  			</div>
+    <div id="screenAfterView">
 
-  		</div>
-  		
-
-  	</div>
+      <div class="row bg-hdr">
 
 
-  </div>
+       <div class="col-md-10 col-md-offset-1 hdr-txt" >
+
+        <h1>HOMELETTE <span> <h4> From the best chefs in the world directly into your kitchen.</h4></span></h1>
+        <br>
+      </div>
+
+    </div>
 
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <div class="col-md-3">
 
-	<!-- The application JavaScript code -->
-	<script src="js/app.js"></script>
-	<script src="js/model/dinnerModel.js"></script>
-	<script src="js/view/exampleView.js"></script>
-	<!--<script src="js/view/exampleViewController.js"></script>-->
-  </body>
+      <h3>My dinner</h3>
+      <hr>
+      <form action="">
+        No. of people:
+        <select name="Dish type">
+          <option value="starter">1</option>
+          <option value="main dish">2</option>
+          <option value="dessert">3</option>
+        </select>
+        <input type="submit">
+      </form>
+
+      <br>
+
+      <div class="row hdr-clr">
+        <div class="col-md-6 col-md-offset-2">
+          <p>Dish Name</p>
+        </div>
+        <div class="col-md-4">
+          <p>Cost</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+          <p>N</p>
+        </div>
+        <div class="col-md-6">
+          <p>Dish name</p>
+        </div>
+
+        <div class="col-md-4">
+          <p>XX.00</p>
+        </div>
+        <hr>
+      </div>
+
+      <div class="row">
+      <hr>
+      <div class="col-md-6 col-md-offset-2">
+          <p><i>Pending</i></p>
+        </div>
+
+        <div class="col-md-4">
+          <p>0.00</p>
+        </div>
+        <hr>
+      </div>
+
+      <div class="row">
+        <hr>
+        <div class="col-md-offset-6">
+          <p>SEK  0.00</p>
+        </div>
+      </div>
+
+      <div class="row center">
+        <button class="button">Confirm Dinner</button>
+        
+      </div>
+
+    </div>
+
+    <div class="col-md-9 ">
+
+      <div class="row hdr-clr">
+
+        <h3>Select dish</h3>
+        <hr>
+        
+
+        <div class="col-md-6">
+          <div class="wrapper">
+            <input type="search" value="Enter key words" name="Search dish"> <button>Search</button>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+
+          <form action="">
+            <select name="Dish type">
+              <option value="starter">starter</option>
+              <option value="main dish">main dish</option>
+              <option value="dessert">dessert</option>
+            </select>
+            <input type="submit">
+          </form>
+          
+        </div>
+        <br>
+        <br>
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-3 border-top">
+
+         <img src="images/meatballs.jpg" alt="meatballs" class="rounded">
+         <br>
+         <br>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+       </div>
+
+       <div class="col-md-3 border-top">
+
+        <img src="images/bakedbrie.jpg" alt="bakedbrie" class="rounded">
+        <br>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+      </div>
+
+      <div class="col-md-3 border-top">
+
+        <img src="images/icecream.jpg" alt="icecream" class="rounded">
+        <br>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+      </div>
+
+      <div class="col-md-3 border-top">
+
+       <img src="images/sourdough.jpg" alt="sourdough" class="rounded">
+       <br>
+       <br>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+     </div>
+
+     <div class="col-md-3 border-top">
+
+      <img src="images/toast.jpg" alt="toast" class="rounded">
+      <br>
+      <br>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+    </div>
+
+
+  </div>  
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+<!-- The application JavaScript code -->
+<script src="js/app.js"></script>
+<script src="js/model/dinnerModel.js"></script>
+<script src="js/view/exampleView.js"></script>
+<!--<script src="js/view/exampleViewController.js"></script>-->
+</body>
 </html>
