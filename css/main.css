@@ -20,6 +20,12 @@
 
 }
 
+.bg-hdr
+{
+       background-color: rgba(39,158, 203, 1.0);
+
+}
+
 .hdr-txt
 {
 	color: #ffffff ; 
@@ -44,3 +50,8 @@
     cursor: pointer;
 }
 
+.wrapper
+{
+    border:1px solid #000;
+    display:inline-block;
+}
