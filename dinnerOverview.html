@@ -1,51 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dinner planner testing</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dinner planner testing</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/main.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css">
 
-  </head>
+</head>
 
-  <body class="bg-img">
- 
+<body>
+
   <div class="container-fluid">
-  
-  	<div id="homeView">
- 
+
+  	<div id="dinnerOverviewView">
+
   		<div class="row bg-hdr-home">
-  	
-
-	  		<div class="col-md-10 col-md-offset-1 hdr-txt" >
-  		
-  				<h1>HOMELETTE <span> <h4> From the best chefs in the world directly into your kitchen.</h4></span></h1>
-  				<br>
-  			</div>
-
-  		</div>
-  		
-
-  	</div>
 
 
-  </div>
+       <div class="col-md-10 col-md-offset-1 hdr-txt" >
+
+        <h1>HOMELETTE <span> <h4> From the best chefs in the world directly into your kitchen.</h4></span></h1>
+        <br>
+      </div>
+
+    </div>
+
+    <div class="row hdr-clr">
+      <div class="col-md-6">
+        <h3>My Dinner: N people</h3>
+
+      </div> 
+      <div class="col-md-6 border-top">
+        <button>Go back and edit dinner</button>
+      </div>
+      <br>
+      <br>
+    </div>
+
+    <div class="row border-top">
+  
+      <div class="row">
+        <div class="col-md-4">
+         <img src="images/meatballs.jpg" alt="meatballs" class="rounded">
+         <br>
+         <p>Meatballs</p>
+         <p>77.20 SEK</p>
+       </div>
+       <div class="col-md-4">
+         <img src="images/toast.jpg" alt="toast" class="rounded">
+         <br>
+         <p>Toasts</p>
+         <p>180.60 SEK</p>
+       </div>
+       <div class="col-md-4">
+         <img src="images/icecream.jpg" alt="icecream" class="rounded">
+         <br>
+         <p>Ice Cream</p>
+         <p>83.40 SEK</p>
+       </div>
+       </div>
+
+       <div class="row align-center">
+       <p>Total: 341.20 SEK</p>
+       </div>
+
+   </div>
+
+   <div class="row border-top">
+     <hr>
+     <br>
+     <button class="button">Print full recipe</button>
+   </div>
 
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+ </div>
 
-	<!-- The application JavaScript code -->
-	<script src="js/app.js"></script>
-	<script src="js/model/dinnerModel.js"></script>
-	<script src="js/view/exampleView.js"></script>
-	<!--<script src="js/view/exampleViewController.js"></script>-->
-  </body>
+
+</div>
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+<!-- The application JavaScript code -->
+<script src="js/app.js"></script>
+<script src="js/model/dinnerModel.js"></script>
+<script src="js/view/exampleView.js"></script>
+<!--<script src="js/view/exampleViewController.js"></script>-->
+</body>
 </html>
