@@ -18,10 +18,6 @@ var SelectDishView = function (container,model) {
   	mainDishes = model.getAllDishes('main dish',);
   	dessertDishes = model.getAllDishes('dessert',);
 
-  	
-console.log(dessertDishes);
-
-
 
   	for(var i = 0; i < starterDishes.length ; i++)
 
