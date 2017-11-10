@@ -7,16 +7,23 @@ var SelectDishView = function (container,model) {
   	var mainDishes = [];
   	var dessertDishes = [];
   	var dishesToDisplay = '';
+    var numOfPeople = 0 ;
+
+ 
 
   	this.starterDisplay = container.find('#starter');
-  	this.mainDisplay = container.find('#mainDish')
-  	this.dessertDisplay = container.find('#dessert')
+  	this.mainDisplay = container.find('#mainDish');
+  	this.dessertDisplay = container.find('#dessert');
+    this.foodTypeSelect = container.find('#food_dropdown');
+    this.numOfPeople = container.find('#NoOfGuests');
+
   	
-  	var test = starterDishes.length
+  	var test = starterDishes.length;
 
   	starterDishes = model.getAllDishes('starter',);
   	mainDishes = model.getAllDishes('main dish',);
   	dessertDishes = model.getAllDishes('dessert',);
+    numOfPeople = model.getNumberOfGuests();
 
 
   	for(var i = 0; i < starterDishes.length ; i++)

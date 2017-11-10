@@ -17,7 +17,7 @@
 
   <div class="container-fluid">
 
-    <div id="selectDishView">
+    <div id="dishView">
 
       <div class="row bg-hdr">
 
@@ -86,17 +86,9 @@
 
       <div class="col-md-6">
 
-        <h2>Meatballs</h2>
-        <img src="images/meatballs.jpg" alt="meatballs" class="rounded">
-        <br>
-        <br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-        <button>back to the selected dish</button>
-        <br>
-        <br>
-        <h2>Preparation</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div id="dishInfoTop"></div>
+      <br><button>back to the selected dish</button><br>
+      <div id="dishInfoBottom"></div>
 
       </div>
 
@@ -104,7 +96,7 @@
 
 
       <div class="col-md-6 hdr-clr">
-        <h3>Ingredients for 3 people: </h3>
+        <h3>Ingredients for <span id="numOfPeople"> </span> people: </h3>
         <hr>
         <div class="row">
           <div class="col-md-3"><p> 2tbsp</p></div>
