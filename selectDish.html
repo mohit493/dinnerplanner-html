@@ -35,16 +35,11 @@
 
       <h3>My dinner</h3>
       <hr>
-      <form action="">
-        No. of people:
-        <select name="Dish type">
-          <option value="starter">1</option>
-          <option value="main dish">2</option>
-          <option value="dessert">3</option>
-        </select>
-        <input type="submit">
-      </form>
 
+       No. of people:
+      <input type="number" id="setNumberOfGuests" min="1" onclick="console.log(value)" />
+
+      <br/>
       <br>
 
       <div class="row hdr-clr">
@@ -97,14 +92,13 @@
 
         <div class="col-md-6" align="center">
 
-          <form action="" id="food_dropdown">
-            <select name="Dish type">
-              <option value="starter">starter</option>
+          Filter dishes by type:
+            <select name="Dish type" id="food_cateogory">
+              <option value="All">All</option>
+              <option value="starter" selected="selected">starter</option>
               <option value="main dish">main dish</option>
               <option value="dessert">dessert</option>
             </select>
-            <input type="submit" value="Submit">
-          </form>
           
         </div>
         <br>

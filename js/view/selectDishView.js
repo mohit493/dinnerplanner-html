@@ -15,7 +15,11 @@ var SelectDishView = function (container,model) {
   	this.mainDisplay = container.find('#mainDish');
   	this.dessertDisplay = container.find('#dessert');
     this.foodTypeSelect = container.find('#food_dropdown');
-    this.numOfPeople = container.find('#NoOfGuests');
+ 
+    var guestInput = document.getElementById("setNumberOfGuests").value;
+    var foodTypeSelect = document.getElementById("food_cateogory").value;
+
+  
 
   	
   	var test = starterDishes.length;

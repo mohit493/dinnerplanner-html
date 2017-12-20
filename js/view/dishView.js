@@ -36,7 +36,6 @@ var DishView = function (container,model) {
 	this.ingredientsList.html(ingredientsInfo);
 	this.totalprice.html(totalpriceInfo);
 
-	console.log(ingredientsInfo);
 
 	
 	
