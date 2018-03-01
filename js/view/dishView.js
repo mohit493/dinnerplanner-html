@@ -13,6 +13,8 @@ var DishView = function (container,model) {
 	var ingredientsInfo = '';
 	var totalpriceInfo = '';
 
+	
+
 	this.dishInfoTop = container.find('#dishInfoTop');
 	this.dishInfoBottom = container.find('#dishInfoBottom');
 	this.numOfGuests = container.find('#numOfPpl');
