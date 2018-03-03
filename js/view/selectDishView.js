@@ -16,9 +16,8 @@ var SelectDishView = function (container,model) {
   	this.dessertDisplay = container.find('#dessert');
     this.foodTypeSelect = container.find('#food_dropdown');
  
-    var guestInput = document.getElementById("setNumberOfGuests").value;
-    var foodTypeSelect = document.getElementById("food_cateogory").value;
-
+    //var guestInput = document.getElementById("setNumberOfGuests").value;
+    //var foodTypeSelect = document.getElementById("food_cateogory").value;
   
 
   	

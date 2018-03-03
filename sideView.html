@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dinner planner testing</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+    <div id="dishView">
+
+      <div class="row bg-hdr">
+
+
+       <div class="col-md-10 col-md-offset-1 hdr-txt" >
+
+        <h1>HOMELETTE <span> <h4> From the best chefs in the world directly into your kitchen.</h4></span></h1>
+        <br>
+      </div>
+
+    </div>
+
+
+    <div class="col-md-3">
+
+      <h3>My dinner</h3>
+      <hr>
+       <p> No. of people: </p>
+        <div class="row">
+        <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+        <input type="number" id="NoOfGuestField" value="2">
+        <button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+        </div>
+
+      <br>
+
+      <div class="row hdr-clr">
+        <div class="col-md-6">
+          <p>Dish Name</p>
+        </div>
+        <div class="col-md-6">
+          <p>Cost</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <p>Pending</p>
+        </div>
+
+        <div class="col-md-6">
+          <p>x.xx</p>
+        </div>
+        <hr>
+      </div>
+
+      <div class="row">
+        <hr>
+        <div class="col-md-offset-6">
+          <p>SEK  Y.YY</p>
+        </div>
+      </div>
+
+      <div class="row center" align="center">
+        <button class="button">Confirm Dinner</button>
+        
+      </div>
+
+
+  </div>
+
+
+</div>
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+<!-- The application JavaScript code -->
+<script src="js/app.js"></script>
+    <script src="js/model/dinnerModel.js"></script>
+    <script src="js/view/exampleView.js"></script>
+    <script src="js/view/dinnerOverviewView.js"></script>
+    <script src="js/view/dinnerPreperationView.js"></script>
+    <script src="js/view/dishView.js"></script>
+    <script src="js/view/exampleView.js"></script>
+    <script src="js/view/homeView.js"></script>
+    <script src="js/view/screenAfterView.js"></script>
+    <script src="js/view/selectDishView.js"></script>
+    <script src="js/view/sideView.js"></script>
+<!--<script src="js/view/exampleViewController.js"></script>-->
+</body>
+</html>

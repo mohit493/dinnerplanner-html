@@ -4,6 +4,23 @@ var DinnerModel = function() {
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
 
+	this.observers = []; 
+
+	this.addObserver = function(observer) 
+	{
+		this.observers.push(observer);
+	}
+
+	var notifyObservers = function(obj) 
+	{
+		for (var i = 0; i < this.observers.length; i++) {
+
+            this.observers[i].update(obj);
+        
+        }
+	}
+
+
 	var NumOfGuests = 5;
 	var DishType = []; // array for storing all the dishes
 	var FullMenu = [{},{},{}]; // array to get all the dishes 
@@ -12,6 +29,7 @@ var DinnerModel = function() {
 
 	this.setNumberOfGuests = function(num) {
 		NumOfGuests = num;
+		notifyObservers();
 		//TODO Lab 2
 	}
 
@@ -86,6 +104,8 @@ var DinnerModel = function() {
 		}
 
 		return MenuPrice*TotalNumOfGuests;
+
+
 		
 		
 		
@@ -129,7 +149,8 @@ var DinnerModel = function() {
 				console.log ("this is wow surprising");
 			}
 			
-	
+			notifyObservers();
+
 
 		return FullMenu;
 
@@ -166,6 +187,12 @@ var DinnerModel = function() {
 				console.log ("this is wow surprising");
 			}
 
+		notifyObservers();
+
+			return FullMenu;
+
+
+
 
 	
 		//TODO Lab 2
@@ -175,6 +202,7 @@ var DinnerModel = function() {
 	//you can use the filter argument to filter out the dish by name or ingredient (use for search)
 	//if you don't pass any filter all the dishes will be returned
 	this.getAllDishes = function (type,filter) {
+		
 	  return dishes.filter(function(dish) {
 		var found = true;
 		if(filter){
