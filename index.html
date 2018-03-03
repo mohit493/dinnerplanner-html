@@ -44,7 +44,7 @@
 
           <div>
           <p><i>start quickly</i></p>
-          <button class="button">Create new dinner</button>
+          <button class="button" id="createNewDinnerButton">Create new dinner</button>
 
           </div>
           </div>
@@ -52,28 +52,20 @@
 
       </div>
 
-      <div id="sideView" style="display:none;">
-
-        <div class="row bg-hdr">
-
-          <div class="col-md-10 col-md-offset-1 hdr-txt" >
-
-              <h1>HOMELETTE <span> <h4> From the best chefs in the world directly into your kitchen.</h4></span></h1>
-              <br>
-          </div>
-
-        </div>
-
-
+      <div id="sideView" style="display:none;" >
       <div class="col-md-3">
 
          <h3>My dinner</h3>
         <hr>
          <p align="left"> Select number of people </p>
+         
+         <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+
          <div class="row">
          <div id="NoOfGuestField" align="left"></div>
-          </div>
+        </div>
 
+          <button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
        <br>
 
           <div class="row hdr-clr">
@@ -106,63 +98,6 @@
     </div>
 
     <div id="selectDishView" style="display:none;">
-
-      <div class="row bg-hdr">
-
-
-       <div class="col-md-10 col-md-offset-1 hdr-txt" >
-
-        <h1>HOMELETTE <span> <h4> From the best chefs in the world directly into your kitchen.</h4></span></h1>
-        <br>
-      </div>
-
-    </div>
-
-
-    <div class="col-md-3">
-
-      <h3>My dinner</h3>
-      <hr>
-
-       No. of people:
-      <input type="number" id="setNumberOfGuests" min="1" onclick="console.log(value)" />
-
-      <br/>
-      <br>
-
-      <div class="row hdr-clr">
-        <div class="col-md-6">
-          <p>Dish Name</p>
-        </div>
-        <div class="col-md-6">
-          <p>Cost</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-          <p>Pending</p>
-        </div>
-
-        <div class="col-md-6">
-          <p>0.00</p>
-        </div>
-        <hr>
-      </div>
-
-      <div class="row">
-        <hr>
-        <div class="col-md-offset-6">
-          <p>SEK  0.00</p>
-        </div>
-      </div>
-
-      <div class="row" align="center">
-        <button class="button">Confirm Dinner</button>
-        
-      </div>
-
-    </div>
 
     <div class="col-md-9 ">
 
@@ -217,69 +152,7 @@
 
   </div>
 
-      <div id="dishView" style="display:none;">
-
-      <div class="row bg-hdr">
-
-
-       <div class="col-md-10 col-md-offset-1 hdr-txt" >
-
-        <h1>HOMELETTE <span> <h4> From the best chefs in the world directly into your kitchen.</h4></span></h1>
-        <br>
-      </div>
-
-    </div>
-
-
-    <div class="col-md-3">
-
-      <h3>My dinner</h3>
-      <hr>
-      <form action="">
-        No. of people:
-        <select name="Dish type">
-          <option value="starter">1</option>
-          <option value="main dish">2</option>
-          <option value="dessert">3</option>
-        </select>
-        <input type="submit">
-      </form>
-
-      <br>
-
-      <div class="row hdr-clr">
-        <div class="col-md-6">
-          <p>Dish Name</p>
-        </div>
-        <div class="col-md-6">
-          <p>Cost</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-          <p>Pending</p>
-        </div>
-
-        <div class="col-md-6">
-          <p>0.00</p>
-        </div>
-        <hr>
-      </div>
-
-      <div class="row">
-        <hr>
-        <div class="col-md-offset-6">
-          <p>SEK  0.00</p>
-        </div>
-      </div>
-
-      <div class="row center" align="center">
-        <button class="button">Confirm Dinner</button>
-        
-      </div>
-
-    </div>
+      <div id="dishView" style="display:none;" >
 
     <div class="col-md-9 ">
 
@@ -341,6 +214,8 @@
     <script src="js/view/homeView.js"></script>
     <script src="js/view/screenAfterView.js"></script>
     <script src="js/view/selectDishView.js"></script>
+    <script src="js/controllers/homeViewController.js" ></script>
+    <script src="js/controllers/sideViewController.js" ></script>
 
     <!--<script src="js/view/exampleViewController.js"></script>-->
     </body>
