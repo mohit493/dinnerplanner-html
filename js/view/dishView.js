@@ -3,10 +3,10 @@ var DishView = function (container,model) {
 	
 	// Get all the relevant elements of the view (ones that show data
   	// and/or ones that responed to interaction
-
-	var Dish = model.getDish(100);
+  	id = 100;
+	var Dish = model.getDish(id);
 	var numOfGuest = model.getNumberOfGuests();
-	var totalPrice = model.getTotalMenuPrice();
+	var DishPrice = model.getDishPrice(id);
 
 	var dishInfoDisplay = '';
 	var numOfGuestsInfo = '';
@@ -20,12 +20,11 @@ var DishView = function (container,model) {
 	this.numOfGuests = container.find('#numOfPpl');
 	this.ingredientsList = container.find("#ingredientsList");
 	this.totalprice = container.find("#totalPrice");
-
 	
 	
 	dishInfoDisplay = '<div><h2>' + Dish.name + '</h2> <br> <img src="images/' + Dish.image + '" alt = "'+Dish.name+'"> <br> <br> <h3>Preperation</h3><p>'+ Dish.description + '</p></div>';
 	numOfGuestsInfo = '<b>' + numOfGuest + '</b>';
-	totalpriceInfo = '<p>'+totalPrice+'</p>';
+	totalpriceInfo = '<p>'+DishPrice+'</p>';
 
 	for(var i = 0; i < Dish.ingredients.length; i++)
 	{

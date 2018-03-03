@@ -13,22 +13,24 @@
 
     </head>
 
-    <body class="bg-img">
-   
-    <div class="container-fluid">
-    
-      <div id="homeView">
-   
-        <div class="row bg-hdr-home">
-      
-
-          <div class="col-md-10 col-md-offset-1 hdr-txt" >
+    <body>
+        <nav class="navbar navbar-fixed-to-top" role="navigation">
+            <div class="row bg-hdr-home">
+        <div class="col-md-10 col-md-offset-1 hdr-txt" >
         
             <h1>HOMELETTE <span> <h4> From the best chefs in the world directly into your kitchen.</h4></span></h1>
             <br>
           </div>
-
+     
         </div>
+        
+    </nav>
+   
+    <div class="container-fluid">
+
+      <div id="homeView">
+   
+        
         <br>
         <br>
         <div class="row col-md-8 ">
@@ -50,6 +52,274 @@
 
       </div>
 
+      <div id="sideView" style="display:none;">
+
+        <div class="row bg-hdr">
+
+          <div class="col-md-10 col-md-offset-1 hdr-txt" >
+
+              <h1>HOMELETTE <span> <h4> From the best chefs in the world directly into your kitchen.</h4></span></h1>
+              <br>
+          </div>
+
+        </div>
+
+
+      <div class="col-md-3">
+
+         <h3>My dinner</h3>
+        <hr>
+         <p align="left"> Select number of people </p>
+         <div class="row">
+         <div id="NoOfGuestField" align="left"></div>
+          </div>
+
+       <br>
+
+          <div class="row hdr-clr">
+          <div class="col-md-6">
+           <p>Dish Name</p>
+          </div>
+          <div class="col-md-6">
+          <p>Cost</p>
+          </div>
+          </div>
+
+      <div class="row" id="StarterDishOnMenu"> </div>
+
+      <div class="row" id="MCDishOnMenu"> </div>
+
+      <div class="row" id="DessertDishOnMenu"></div>
+
+        <div class="row">
+        <hr>
+        <div class="col-md-offset-6" id="totalMenuPrice"></div>
+        <hr>
+        </div>
+
+      <div class="row center" align="center">
+        <button class="button">Confirm Dinner</button>
+        
+      </div>
+
+      </div>
+    </div>
+
+    <div id="selectDishView" style="display:none;">
+
+      <div class="row bg-hdr">
+
+
+       <div class="col-md-10 col-md-offset-1 hdr-txt" >
+
+        <h1>HOMELETTE <span> <h4> From the best chefs in the world directly into your kitchen.</h4></span></h1>
+        <br>
+      </div>
+
+    </div>
+
+
+    <div class="col-md-3">
+
+      <h3>My dinner</h3>
+      <hr>
+
+       No. of people:
+      <input type="number" id="setNumberOfGuests" min="1" onclick="console.log(value)" />
+
+      <br/>
+      <br>
+
+      <div class="row hdr-clr">
+        <div class="col-md-6">
+          <p>Dish Name</p>
+        </div>
+        <div class="col-md-6">
+          <p>Cost</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <p>Pending</p>
+        </div>
+
+        <div class="col-md-6">
+          <p>0.00</p>
+        </div>
+        <hr>
+      </div>
+
+      <div class="row">
+        <hr>
+        <div class="col-md-offset-6">
+          <p>SEK  0.00</p>
+        </div>
+      </div>
+
+      <div class="row" align="center">
+        <button class="button">Confirm Dinner</button>
+        
+      </div>
+
+    </div>
+
+    <div class="col-md-9 ">
+
+      <div class="row hdr-clr">
+        <div class="col-md-offset-1"> 
+          <h3>Select Dish</h3>
+          <hr>
+        </div> 
+
+        <div class="col-md-6" align="center">
+          <div class="wrapper">
+            <input type="search" value="Enter key words" name="Search dish"> <button>Search</button>
+          </div>
+        </div>
+
+        <div class="col-md-6" align="center">
+
+          Filter dishes by type:
+            <select name="Dish type" id="food_cateogory">
+              <option value="All">All</option>
+              <option value="starter" selected="selected">starter</option>
+              <option value="main dish">main dish</option>
+              <option value="dessert">dessert</option>
+            </select>
+          
+        </div>
+        <br>
+        <br>
+      </div>
+
+      <div class="row">
+        <div id="allDisheshere" align="center">
+          <br><br>
+
+          <div id="starter"></div>
+          <br>
+          <div id="mainDish"></div>
+          <br>
+          <div id="dessert"></div>
+          <br>
+
+        </div> 
+
+      </div>
+
+      
+
+
+
+    </div>  
+
+
+  </div>
+
+      <div id="dishView" style="display:none;">
+
+      <div class="row bg-hdr">
+
+
+       <div class="col-md-10 col-md-offset-1 hdr-txt" >
+
+        <h1>HOMELETTE <span> <h4> From the best chefs in the world directly into your kitchen.</h4></span></h1>
+        <br>
+      </div>
+
+    </div>
+
+
+    <div class="col-md-3">
+
+      <h3>My dinner</h3>
+      <hr>
+      <form action="">
+        No. of people:
+        <select name="Dish type">
+          <option value="starter">1</option>
+          <option value="main dish">2</option>
+          <option value="dessert">3</option>
+        </select>
+        <input type="submit">
+      </form>
+
+      <br>
+
+      <div class="row hdr-clr">
+        <div class="col-md-6">
+          <p>Dish Name</p>
+        </div>
+        <div class="col-md-6">
+          <p>Cost</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <p>Pending</p>
+        </div>
+
+        <div class="col-md-6">
+          <p>0.00</p>
+        </div>
+        <hr>
+      </div>
+
+      <div class="row">
+        <hr>
+        <div class="col-md-offset-6">
+          <p>SEK  0.00</p>
+        </div>
+      </div>
+
+      <div class="row center" align="center">
+        <button class="button">Confirm Dinner</button>
+        
+      </div>
+
+    </div>
+
+    <div class="col-md-9 ">
+
+
+      <div class="col-md-6">
+
+      <div id="dishInfoTop"></div>
+      <br><button>back to the selected dish</button><br>
+      <div id="dishInfoBottom"></div>
+
+      </div>
+
+
+
+
+      <div class="col-md-6 hdr-clr">
+        <h3>Ingredients for <span id="numOfPpl"> </span> people: </h3>
+        <hr>
+        <div id="ingredientsList"></div>
+
+        <hr>
+        <div class="row">
+        <div class="col-md-8"><button>Confirm Dish</button></div>
+          <div class="col-md-2">SEK</div>
+          <div class="col-md-2" id="totalPrice"></div>
+        </div>
+
+        <br>
+        <br>
+
+      </div>
+
+
+
+
+    </div>
+
+
+  </div>
+
 
     </div>
 
@@ -63,6 +333,7 @@
     <script src="js/app.js"></script>
     <script src="js/model/dinnerModel.js"></script>
     <script src="js/view/exampleView.js"></script>
+    <script src="js/view/sideView.js"></script>
     <script src="js/view/dinnerOverviewView.js"></script>
     <script src="js/view/dinnerPreperationView.js"></script>
     <script src="js/view/dishView.js"></script>

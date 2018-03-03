@@ -4,32 +4,30 @@ var DinnerModel = function() {
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
 
-	this.observers = []; 
+	//this.observers = []; 
 
-	this.addObserver = function(observer) 
-	{
-		this.observers.push(observer);
-	}
+	//this.addObserver = function(observer) 
+	//{
+	//	this.observers.push(observer);
+	//}
 
-	var notifyObservers = function(obj) 
-	{
-		for (var i = 0; i < this.observers.length; i++) {
+	//var notifyObservers = function(obj) 
+	//{
+	//	for (var i = 0; i < this.observers.length; i++) {
 
-            this.observers[i].update(obj);
+      //      this.observers[i].update(obj);
         
-        }
-	}
-
+        //}
+	//}
 
 	var NumOfGuests = 5;
-	var DishType = []; // array for storing all the dishes
+	
 	var FullMenu = [{},{},{}]; // array to get all the dishes 
 	var AllIngredients = []; // array to get all ingredients
 	
 
 	this.setNumberOfGuests = function(num) {
 		NumOfGuests = num;
-		notifyObservers();
 		//TODO Lab 2
 	}
 
@@ -45,7 +43,7 @@ var DinnerModel = function() {
 	//Returns the dish that is on the menu for selected type 
 	this.getSelectedDish = function(type) {
 
-		
+		var DishType = []; // array for storing all the dishes
 		for(key in dishes)
 		{
 
@@ -79,34 +77,55 @@ var DinnerModel = function() {
 		return AllIngredients;
 	}
 
+	this.getDishIngredients = function(id)
+	{ 
+		var DishIngredients = [];
+
+		for(key in dishes)
+		{
+			if(id == key)
+			{
+				DishIngredients.push(dishes[key].ingredients);
+			}
+		}
+
+		return DishIngredients;
+
+	}
+
+	this.getDishPrice = function(id)
+	{
+		var DishPrice = 0;
+
+		var DishChoosen = this.getDish(id);
+
+		for (key in DishChoosen.ingredients)
+		{
+			DishPrice = DishPrice + DishChoosen.ingredients[key].price;
+		}
+
+		return DishPrice;
+
+	}
+
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
 		
 		var TotalNumOfGuests = this.getNumberOfGuests();
-		var AllIngredients = this.getAllIngredients();
+		var FullMenu = this.getFullMenu();
 		var MenuPrice = 0;
-		var ArrayLength = 0;
-		var TempArray = [];
 
-		
+		 for(key in FullMenu)
+		 {
+		 	if (FullMenu[key].id == undefined)
+		 		{ continue; }
+		 	else
+		 	{
+		 		MenuPrice = MenuPrice + this.getDishPrice(FullMenu[key].id);
+		 	}
+		 }
 
-		for (key in AllIngredients)
-		{
-			ArrayLength = AllIngredients[key].length;
-			TempArray = AllIngredients[key];
-
-			for (var i = 0; i < ArrayLength; i++) {
-
-				MenuPrice = MenuPrice + TempArray[i].price;
-			}
-			
-			
-		}
-
-		return MenuPrice*TotalNumOfGuests;
-
-
-		
+		return MenuPrice*TotalNumOfGuests;	
 		
 		
 	}
@@ -124,7 +143,6 @@ var DinnerModel = function() {
 			if(dishes[key].id == id)
 			{
 				dishToAdd = dishes[key];
-				console.log("this is being added"+key);
 			}
 			
 		}
@@ -138,7 +156,6 @@ var DinnerModel = function() {
 			else if(dishToAdd.type == "main dish")
 			{
 				FullMenu[1] = dishToAdd;
-				console.log("this is being added");
 			}
 			else if(dishToAdd.type == "dessert")
 			{
@@ -149,7 +166,6 @@ var DinnerModel = function() {
 				console.log ("this is wow surprising");
 			}
 			
-			notifyObservers();
 
 
 		return FullMenu;
@@ -187,7 +203,6 @@ var DinnerModel = function() {
 				console.log ("this is wow surprising");
 			}
 
-		notifyObservers();
 
 			return FullMenu;
 
