@@ -1,7 +1,6 @@
 var SideView = function (container,model) {
 	
 	model.addObserver(this);
-
 	// Get all the relevant elements of the view (ones that show data
   	// and/or ones that responed to interaction
   	model.addDishToMenu(1);
@@ -32,7 +31,6 @@ var SideView = function (container,model) {
 	this.update = function()
 
 	{
-			console.log('Function Ran');
 			numOfGuest = model.getNumberOfGuests();
 			numOfGuestFieldInfo = '<input type = "number" value = "'+numOfGuest+'">';
 			this.totalGuestNumberDisplay.html(numOfGuestFieldInfo);
