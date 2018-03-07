@@ -12,10 +12,10 @@ var DinnerModel = function() {
 		console.log(observer);
 	}
 
-	var notifyObservers = function()
+	var notifyObservers = function(arg)
 	{
 		for (var i = 0; i <observers.length; i++) {
-		observers[i].update();
+		observers[i].update(arg);
 		}
 	}
 
@@ -27,7 +27,7 @@ var DinnerModel = function() {
 
 	this.setNumberOfGuests = function(num) {
 		NumOfGuests = num;
-	notifyObservers();
+	notifyObservers("GuestChange");
 		//TODO Lab 2
 	}
 

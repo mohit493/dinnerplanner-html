@@ -68,10 +68,23 @@ var SideView = function (container,model) {
 
 	var ObserverObj = {
 		name: "SideView",
-		update: function(){
+		update: function(arg){
+			if(arg == "GuestChange")
+			{
+			console.log("altered version running");
+
 			numOfGuest = model.getNumberOfGuests();
 			numOfGuestFieldInfo = '<input type = "number" value = "'+numOfGuest+'">';
 			totalGuestNumberDisplay.html(numOfGuestFieldInfo);
+			}
+			else
+			{
+				console.log("base version running");
+			numOfGuest = model.getNumberOfGuests();
+			numOfGuestFieldInfo = '<input type = "number" value = "'+numOfGuest+'">';
+			totalGuestNumberDisplay.html(numOfGuestFieldInfo);
+			}
+			
 		}
 
 	}
