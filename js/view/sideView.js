@@ -1,6 +1,6 @@
 var SideView = function (container,model) {
+
 	
-	model.addObserver(this);
 	// Get all the relevant elements of the view (ones that show data
   	// and/or ones that responed to interaction
   	model.addDishToMenu(1);
@@ -14,7 +14,7 @@ var SideView = function (container,model) {
 	//var numOfGuestField = document.getElementById('#NoOfGuestField').value;
 
 	this.totalMenuPriceDisplay = container.find("#totalMenuPrice");
-	this.totalGuestNumberDisplay = container.find("#NoOfGuestField");
+	var totalGuestNumberDisplay = container.find("#NoOfGuestField");
 	this.StarterOnMenuDisplay = container.find("#StarterDishOnMenu");
 	this.MCOnMenuDisplay = container.find("#MCDishOnMenu");
 	this.DessertOnMenuDisplay = container.find("#DessertDishOnMenu");
@@ -27,15 +27,6 @@ var SideView = function (container,model) {
 	var StarterOnMenu = '';
 	var MCOnMenu = '';
 	var DessertOnMenu = '';
-
-	this.update = function()
-
-	{
-			numOfGuest = model.getNumberOfGuests();
-			numOfGuestFieldInfo = '<input type = "number" value = "'+numOfGuest+'">';
-			this.totalGuestNumberDisplay.html(numOfGuestFieldInfo);
-
-	}
 
 
 	totalMenuPriceInfo = '<p> SEK '+ totalPrice + '</p>';
@@ -70,14 +61,25 @@ var SideView = function (container,model) {
 
 	}
 
-
-
 	this.totalMenuPriceDisplay.html(totalMenuPriceInfo);
 	this.StarterOnMenuDisplay.html(StarterOnMenu);
 	this.MCOnMenuDisplay.html(MCOnMenu);
 	this.DessertOnMenuDisplay.html(DessertOnMenu);
 
-	this.update();
+	var ObserverObj = {
+		name: "SideView",
+		update: function(){
+			numOfGuest = model.getNumberOfGuests();
+			numOfGuestFieldInfo = '<input type = "number" value = "'+numOfGuest+'">';
+			totalGuestNumberDisplay.html(numOfGuestFieldInfo);
+		}
+
+	}
+
+	ObserverObj.update();
+
+	model.addObservers(ObserverObj);
+
 
 	
 }

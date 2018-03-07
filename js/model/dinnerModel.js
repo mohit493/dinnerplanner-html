@@ -4,25 +4,20 @@ var DinnerModel = function() {
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
 
-	this.observers = []; 
+	var observers = [];
 
-
-	this.addObserver = function(observer) 
+	this.addObservers = function(observer)
 	{
-		this.observers.push(observer);
+		observers.push(observer);
+		console.log(observer);
 	}
 
-
-    this.notifyObserver = function(arg) {
-
-    	for (var i = 0; i < this.observers.length; i++) 
-    	{
-    		this.observers[i](this,arg);
-
-    	}
+	var notifyObservers = function()
+	{
+		for (var i = 0; i <observers.length; i++) {
+		observers[i].update();
+		}
 	}
-
-	
 
 	var NumOfGuests = 5;
 	
@@ -32,12 +27,14 @@ var DinnerModel = function() {
 
 	this.setNumberOfGuests = function(num) {
 		NumOfGuests = num;
+	notifyObservers();
 		//TODO Lab 2
-		this.notifyObserver('GuestChange');
 	}
 
 	// should return 
 	this.getNumberOfGuests = function() {
+
+
 		
 	return NumOfGuests;
 	
@@ -171,7 +168,6 @@ var DinnerModel = function() {
 				console.log ("this is wow surprising");
 			}
 			
-				this.notifyObserver('MenuChange');
 
 		return FullMenu;
 
@@ -207,7 +203,6 @@ var DinnerModel = function() {
 			{
 				console.log ("this is wow surprising");
 			}
-		this.notifyObserver('MenuChange');
 
 
 			return FullMenu;
